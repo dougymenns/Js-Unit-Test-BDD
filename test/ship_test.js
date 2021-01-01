@@ -66,6 +66,12 @@ describe("fire", function () {
         ships: [{ locations: [[0, 0]], damage: [] }],
       };
   })
+  after(function(){
+      console.log('entire test suite completed')
+  })
+  afterEach(function(){
+      console.log('one unit test completed')
+  })
   it("should record damage on a given player ship at a given coordinate", function () {
     
     fire(player, [0, 0]);
